@@ -1,0 +1,317 @@
+// calculating image width and height depends on parent box width
+$squareImage                     : calc(33% - 20px);
+$longImageHeight                 : calc((66% - 20px) / 1.666);
+$longImageWidth                  : calc(66% - 20px);
+$smallImageHeight                : calc((33% - 20px) / 2.064);
+$tallImage                       : calc((33% - 20px) / 0.5987);
+$boxMaxHeight                    : calc((33% - 20px) / 0.5);
+
+body {
+	background-color : #191D23;
+	font-family      : "Bw Modelica", sans-serif;
+}
+
+strong {
+	font-weight : bold;
+}
+
+//titles primary font
+.text-primary {
+	font-weight : 300;
+	font-size   : 58px;
+	line-height : 69px;
+
+	@include break(large1650) {
+		font-size   : 45px;
+		line-height : 55px;
+	}
+	@include break(large1470) {
+		font-size   : 40px;
+		line-height : 50px;
+	}
+	@include break(desktop) {
+		font-size   : 30px;
+		line-height : 40px;
+	}
+	@include break(tablet) {
+		font-size   : 25px;
+		line-height : 35px;
+	}
+	@include break(medium850) {
+	}
+	@include break(small) {
+		font-size : 30px;
+	}
+	@include break(x-small) {
+	}
+}
+
+//	descriptions font
+.text-secondary {
+	font-weight : 300;
+	font-size   : 22px;
+	line-height : 30px;
+
+	@include break(large1650) {
+		font-size   : 18px;
+		line-height : 25px;
+	}
+	@include break(large1470) {
+		font-size   : 16px;
+		line-height : 23px;
+	}
+	@include break(desktop) {
+		font-size   : 15px;
+		line-height : 23px;
+	}
+	@include break(tablet) {
+		font-size   : 13px;
+		line-height : 18px;
+	}
+	@include break(small) {
+		font-size : 18px;
+	}
+}
+
+//	font for intro-page
+.text-additional {
+	font-weight : 300;
+	font-size   : 22px;
+	line-height : 1.36;
+
+	@include break(large1650) {
+		font-size : 18px;
+	}
+	@include break(large1470) {
+		font-size : 16px;
+	}
+	@include break(desktop) {
+		font-size : 15px;
+	}
+	@include break(tablet) {
+		font-size : 13px;
+	}
+	@include break(small) {
+		font-size : 15px;
+	}
+}
+
+.intro-page {
+	position                  : relative;
+	background-image          : url(../images/bg-main.png);
+	background-size           : cover;
+	background-position       : center 10px;
+	width                     : 100vw;
+	padding-top               : 47px;
+	margin-top : -10px;
+
+	$introPageBgMobilesWidth  : calc(100vw / 1.65652);
+	$introPageBgMobilesHeight : calc((100vw / 1.65652) / 1.380552);
+
+	&__mobiles {
+		position : absolute;
+		top      : 0;
+		right    : 1%;
+		width    : $introPageBgMobilesWidth;
+		height   : $introPageBgMobilesHeight;
+
+		@include break(small) {
+			position : relative;
+			width    : 100%;
+			height   : auto;
+			top      : 0;
+			right    : -15px;
+			order    : 2;
+
+			display : none;
+		}
+		@include break(x-small) {
+			position : relative;
+			width    : 100%;
+			height   : auto;
+			top      : 0;
+			right    : -15px;
+			order    : 2;
+		}
+
+		img {
+			width  : 100%;
+			height : 100%;
+		}
+	}
+
+	&__content {
+		width          : 550px;
+		padding-bottom : 330px;
+
+		@include break(large1650) {
+			width          : 450px;
+			padding-bottom : 270px;
+		}
+		@include break(large1470) {
+			width          : 400px;
+			padding-bottom : 150px;
+		}
+		@include break(desktop) {
+			width          : 350px;
+			padding-bottom : 130px;
+		}
+		@include break(tablet) {
+			width          : 320px;
+			padding-bottom : 70px;
+		}
+		@include break(small) {
+			width: 100%;
+			order : 1;
+		}
+		@include break(x-small) {
+		}
+	}
+
+	$introPageLogoWidth       : calc(100vw / 15.875);
+	$introPageLogoHeight      : calc((100vw / 15.875) / 1.2);
+
+	&__logo {
+		width         : $introPageLogoWidth;
+		height        : $introPageLogoHeight;
+		margin-bottom : 60px;
+
+		@include break(large1470) {
+			margin-bottom : 40px;
+		}
+		@include break(small) {
+			width  : 120px;
+			height : auto;
+			margin : 0 auto 25px;
+		}
+
+		svg {
+			width  : 100%;
+			height : 100%;
+		}
+	}
+
+	&__title {
+		padding-bottom : 25px;
+
+		@include break(small) {
+			text-align : center;
+		}
+		@include break(x-small) {
+			text-align : center;
+		}
+	}
+
+	&__subtitle {
+		padding-bottom : 75px;
+
+		@include break(large1470) {
+			padding-bottom : 45px;
+		}
+
+		@include break(small) {
+			text-align : center;
+			width : 50%;
+			margin : 0 auto;
+		}
+		@include break(x-small) {
+			width : 100%;
+		}
+	}
+
+	&__wrapper {
+		@include break(small) {
+			display   : flex;
+			flex-flow : column nowrap;
+		}
+	}
+}
+
+.download-box {
+	display                : flex;
+	flex-flow              : row nowrap;
+
+	@include break(small) {
+		justify-content: center;
+		padding : 450px 0 0;
+		margin-top : -50px;
+		width: 100%;
+		height: auto;
+		background : url(../images/mobile-phones.png) center 0 no-repeat;
+		background-size: 90%;
+	}
+	@include break(ss-small) {
+		margin-top : -20px;
+		padding: 400px 0 0;
+	}
+	@include break(s-small) {
+		padding: 350px 0 0;
+	}
+	@include break(x-small) {
+		padding: 300px 0 0;
+	}
+
+	$downloadButtonsWidth  : calc(100vw / 9.29268);
+	$downloadButtonsHeight : calc((100vw / 9.29268) / 3.727272);
+
+	&-links {
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+		width           : $downloadButtonsWidth;
+		height          : $downloadButtonsHeight;
+		background      : linear-gradient(225.86deg, #4C5563 0%, #252A32 101.55%);
+		box-shadow      : 0 0 30px rgba(0, 0, 0, 0.5);
+		border-radius   : 29px;
+		transition      : transform 0.3s ease;
+
+		@include break(tablet1100) {
+			width  : 147px;
+			height : 40px;
+		}
+		@include break(medium) {
+			width  : 147px;
+			height : 40px;
+		}
+		@include break(medium850) {
+			width  : 147px;
+			height : 40px;
+		}
+
+		img {
+			width  : 100%;
+			height : 100%;
+			@include break(tablet1100) {
+				height : 26px;
+				width  : auto;
+			}
+		}
+
+		&:hover {
+
+			transform : scale(1.05);
+		}
+	}
+}
+
+$appStoreBtnPaddingsY            : calc(100vw / 213.333);
+$appStoreBtnPaddingsX            : calc(100vw / 60);
+$googlePlayBtnPaddingsY          : calc(100vw / 213.333);
+$googlePlayStoreBtnPaddingTop    : calc(100vw / 160);
+$googlePlayStoreBtnPaddingsX     : calc(100vw / 68.571);
+$googlePlayStoreBtnPaddingBottom : calc(100vw / 213.333);
+.app-store {
+	padding      : $appStoreBtnPaddingsY $appStoreBtnPaddingsX;
+	margin-right : 5px;
+}
+
+.google-play {
+	padding     : $googlePlayStoreBtnPaddingTop $googlePlayStoreBtnPaddingsX $googlePlayStoreBtnPaddingBottom;
+	margin-left : 5px;
+}
+
+//
+
+
+
+

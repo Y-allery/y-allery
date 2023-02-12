@@ -1,0 +1,41 @@
+{
+	"name": "test_gulp",
+	"version": "1.0.0",
+	"description": "test gulp tasks",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.7.4",
+		"@babel/preset-env": "^7.7.4",
+		"babel-eslint": "^10.0.3",
+		"babel-preset-env": "^1.6.0",
+		"gulp-autoprefixer": "^7.0.1",
+		"babel-preset-es2015": "^6.24.1",
+		"babelify": "^10.0.0",
+		"eslint-config-airbnb": "^15.1.0",
+		"eslint-plugin-jsx-a11y": "^6.0.2",
+		"gulp": "^4.0.0",
+		"gulp-babel": "^6.1.2",
+		"gulp-browserify": "^0.5.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-eslint": "^4.0.2",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-twig": "^1.2.0",
+		"gulp-uglify": "^3.0.0",
+		"gulp-util": "^3.0.8",
+		"node-sass": "^4.11.0",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"dependencies": {
+		"perfect-scrollbar": "^1.5.0",
+		"smoothscroll-polyfill": "^0.4.4"
+	}
+}

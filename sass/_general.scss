@@ -1,0 +1,104 @@
+html {
+	overflow-x : hidden;
+}
+
+body {
+	position   : relative;
+	overflow-x : hidden;
+	width      : 100%;
+	height     : 100%;
+	background : #ffffff;
+	color      : #fff;
+
+	* {
+		margin     : 0;
+		padding    : 0;
+		outline    : none !important;
+		box-sizing : border-box !important;
+	}
+}
+
+strong {
+	font-weight : 500;
+}
+
+ul, a, span {
+	list-style-type : none;
+}
+
+figure, p {
+	margin : 0;
+
+}
+
+a {
+	text-decoration : none;
+}
+
+button, input {
+	appearance : none;
+	outline    : none;
+	border     : none;
+}
+
+
+.container {
+	width        : calc(100vw / 1.25389);
+	margin-left  : auto;
+	margin-right : auto;
+
+	@include break(small) {
+		width    : 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	@include break(x-small) {
+		width    : 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+}
+
+.container-content {
+	width         : calc(100vw / 1.6565);
+	margin-left   : auto;
+	margin-right  : auto;
+	padding-left  : 5px;
+	padding-right : 5px;
+	@include break(desktop) {
+		width: 800px;
+	}
+	@include break(tablet) {
+		width: 700px;
+	}
+	@include break(small) {
+		width         : 100%;
+		padding-left  : 10px;
+		padding-right : 10px;
+	}
+	@include break(x-small) {
+		width         : 100%;
+		padding-left  : 10px;
+		padding-right : 10px;
+	}
+}
+
+.container-content-smallest {
+	width        : calc(100vw / 1.81428);
+	margin-left  : auto;
+	margin-right : auto;
+
+	@include break(small) {
+		width         : 100%;
+		padding-left  : 15px;
+		padding-right : 15px;
+	}
+	@include break(x-small) {
+		width         : 100%;
+		padding-left  : 15px;
+		padding-right : 15px;
+	}
+}
+
+

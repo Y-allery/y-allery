@@ -1,0 +1,70 @@
+.site-footer {
+	display          : flex;
+	flex-flow        : column nowrap;
+	align-items      : center;
+	background-color : #191D23;
+	padding          : calc(100vw / 35.2777) 0;
+
+	@include break(small) {
+		padding : 35px 0 60px;
+	}
+
+	&__logo {
+		width: 93px;
+		height: auto;
+		padding-bottom : calc(100vw / 47.625);
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__copyright {
+		font-family : "Bw Modelica Light", sans-serif;
+		font-size   : 14px;
+		line-height : 1.2;
+		opacity     : 0.35;
+
+		@include break(x-small) {
+			font-size: 10px;
+		}
+	}
+}
+
+.footer-buttons {
+	padding-bottom : calc(100vw / 29.30769);
+
+	@include break(small) {
+		padding-bottom : 45px;
+		padding-top    : 0;
+		background     : none;
+		margin         : 0;
+	}
+}
+
+.site-footer__form {
+	display        : flex;
+	flex-flow      : column nowrap;
+	align-items    : center;
+	padding-bottom : calc(100vw / 35.943396);
+
+	@include break(small) {
+		padding-bottom : 25px;
+	}
+
+	&-mailto {
+		width         : 16px;
+		height        : 13px;
+		margin-bottom : 15px;
+		transition    : transform 0.3s ease;
+
+		&:hover {
+			transform : scale(1.1);
+		}
+	}
+
+	a {
+		color           : #fff !important;
+		text-decoration : none;
+	}
+}

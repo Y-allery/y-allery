@@ -1,0 +1,220 @@
+.about-page {
+	background-color: #191D23;
+	overflow: hidden;
+
+	&-wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		position: relative;
+	}
+
+	$aboutPageImageWidth: calc(100vw / 3.048387);
+	$aboutPageImageHeight: $aboutPageImageWidth;
+
+	&__image {
+		width: $aboutPageImageWidth;
+		height: $aboutPageImageHeight;
+		position: absolute;
+		right: -7%;
+		top: 5%;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		@include break(large1470) {
+			right: -15%;
+		}
+		@include break(desktop) {
+			right: -5%;
+		}
+		@include break(tablet) {
+			right: -10%;
+		}
+		@include break(medium850) {
+			right: -2%;
+		}
+		@include break(small) {
+			width: 220px;
+			height: 240px;
+			position: absolute;
+			right: auto;
+			top: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+$aboutPageContentPaddingTop: calc(100vw / 13.13793);
+$aboutPageContentPaddingRight: calc(100vw / 238.125);
+$aboutPageContentPaddingBottom: calc(100vw / 7.47058);
+
+.about-page__content {
+	//padding : 145px 8px 255px 8px;
+	padding: $aboutPageContentPaddingTop $aboutPageContentPaddingRight $aboutPageContentPaddingBottom;
+
+	@include break(small) {
+		padding: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	&-title {
+		margin-bottom: 15px;
+	}
+
+	&-subtitle {
+		width: 550px;
+
+		@include break(large1650) {
+			width: 480px;
+		}
+		@include break(large1470) {
+			width: 420px;
+		}
+		@include break(small) {
+			max-width: 100%;
+			width: 450px;
+			padding-top: 20px;
+			margin: 0 auto 45px;
+			font-size: 15px;
+		}
+	}
+}
+
+.about-page__box {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding-top: 25px;
+	padding-left: 110px;
+	padding-bottom: 50px;
+
+	@include break(large1470) {
+		padding-left: 80px;
+	}
+
+	@include break(small) {
+		padding: 0;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__item {
+		position: relative;
+		width: 250px;
+		display: flex;
+		flex-flow: column wrap;
+
+		@include break(large1650) {
+			width: 180px;
+		}
+		@include break(large1470) {
+			width: 155px;
+		}
+		@include break(tablet) {
+			width: 140px;
+		}
+		@include break(small) {
+			align-items: center;
+			justify-content: flex-start;
+			max-width: 100%;
+			width: 300px;
+			padding-top: 70px;
+			margin-bottom: 40px;
+			position: relative;
+		}
+	}
+
+	&-caption {
+		padding-bottom: 10px;
+	}
+
+	&-description {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 22px;
+
+		@include break(large1470) {
+			font-size: 12px;
+			line-height: 18px;
+		}
+		@include break(desktop) {
+			font-size: 10px;
+			line-height: 16px;
+		}
+		@include break(tablet) {
+			font-size: 13px;
+			line-height: 18px;
+		}
+		@include break(small) {
+			font-size: 13px;
+			line-height: 18px;
+			text-align: center;
+		}
+	}
+
+	$aboutPageBoxImagesTop: calc(-100vw / 381);
+	$aboutPageBoxImagesLeft: calc(-100vw / 19.05);
+	$aboutPageBoxImageThreeLeft: calc(-100vw / 24);
+	$aboutPageBoxImageOneWidth: calc(100vw / 23.8125);
+	$aboutPageBoxImageOneHeight: calc((100vw / 23.8125) / 1.23076);
+	$aboutPageBoxImageTwoWidth: calc(100vw / 21.452513);
+	$aboutPageBoxImageTwoHeight: calc((100vw / 22.54438) / 1.69);
+	$aboutPageBoxImageThreeWidth: calc(100vw / 28.95136);
+	$aboutPageBoxImageThreeHeight: calc((100vw / 28.95136) / 0.960584);
+
+	&-item-one:before {
+		content: '';
+		position: absolute;
+		top: $aboutPageBoxImagesTop;
+		left: $aboutPageBoxImagesLeft;
+		width: $aboutPageBoxImageOneWidth;
+		height: $aboutPageBoxImageOneHeight;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(../images/1.svg);
+	}
+
+	&-item-two:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: $aboutPageBoxImagesLeft;
+		width: $aboutPageBoxImageTwoWidth;
+		height: $aboutPageBoxImageTwoHeight;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(../images/2.svg);
+	}
+
+	&-item-three:before {
+		content: '';
+		position: absolute;
+		top: $aboutPageBoxImagesTop;
+		left: $aboutPageBoxImageThreeLeft;
+		width: $aboutPageBoxImageThreeWidth;
+		height: $aboutPageBoxImageThreeHeight;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(../images/3.svg);
+	}
+
+
+	&-item-one:before,
+	&-item-two:before,
+	&-item-three:before {
+		@include break(small) {
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 70px;
+			height: 40px;
+		}
+	}
+}

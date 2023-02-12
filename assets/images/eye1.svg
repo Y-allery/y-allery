@@ -1,0 +1,28 @@
+<svg width="930" height="930" viewBox="0 0 930 930" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.165006">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="930" height="929">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M178.099 752.71C178.099 752.71 144.159 432.053 287.738 288.475C431.316 144.896 752.266 178.543 752.266 178.543C752.266 178.543 785.686 499.047 642.144 642.589C498.603 786.13 178.099 752.71 178.099 752.71Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<circle cx="464.801" cy="465.241" r="20.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="39.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="59.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="78.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="98.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="118.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="138.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="465.508" cy="465.241" r="159" transform="rotate(-45 465.508 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="178.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="199.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="219.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="239.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+<circle cx="465.508" cy="465.241" r="260" transform="rotate(-45 465.508 465.241)" stroke="white"/>
+<circle cx="465.508" cy="465.241" r="280" transform="rotate(-45 465.508 465.241)" stroke="white"/>
+<circle cx="465.508" cy="465.241" r="300" transform="rotate(-45 465.508 465.241)" stroke="white"/>
+<circle cx="465.508" cy="465.241" r="320" transform="rotate(-45 465.508 465.241)" stroke="white"/>
+<circle cx="465.508" cy="465.241" r="342" transform="rotate(-45 465.508 465.241)" stroke="white"/>
+<circle cx="465.508" cy="465.241" r="361" transform="rotate(-45 465.508 465.241)" stroke="white"/>
+<circle cx="464.801" cy="465.241" r="382.5" transform="rotate(-45 464.801 465.241)" stroke="white"/>
+</g>
+</g>
+</svg>

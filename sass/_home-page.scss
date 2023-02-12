@@ -1,0 +1,74 @@
+.home-wrapper {
+	display         : flex;
+	flex-direction  : column;
+	justify-content : space-between;
+	min-height      : 100vh;;
+	position        : relative;
+	padding-top     : 7%;
+	padding-bottom  : 11%;
+
+	@include break(medium850) {
+		padding-top    : 0;
+		padding-bottom : 0;
+	}
+
+}
+
+
+.main-content {
+
+	@include break(medium850) {
+		display : none;
+	}
+
+	&__description {
+		margin-top  : 60px;
+		font-family : 'Lab Grotesque', sans-serif;
+		font-weight : 500;
+		font-size   : 22px;
+		line-height : 1.18;
+		color       : #262626;
+
+		span:not(:first-child) {
+			position : relative;
+
+			&:before {
+				content       : "";
+				width         : 4px;
+				height        : 4px;
+				background    : linear-gradient(0deg, #262626, #262626);
+				border-radius : 50%;
+				position      : absolute;
+				top           : 50%;
+				left          : -13px;
+				transform     : translateY(-50%);
+
+			}
+		}
+
+		span:not(:last-child) {
+			margin-right : 22px
+		}
+	}
+
+	&__button-wrapper {
+		margin-top : 70px;
+	}
+}
+
+
+.home-image {
+	display   : flex;
+	max-width : 100%;
+	position  : relative;
+	height    : 100vh;
+
+	@include break(medium850) {
+		display : none;
+	}
+
+	img {
+		height    : auto;
+		max-width : none;
+	}
+}

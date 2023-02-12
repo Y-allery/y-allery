@@ -1,0 +1,129 @@
+
+@mixin break($point) {
+	@if $point == min1920 {
+		@media  only screen and (min-width: 1920px) { @content; }
+	}
+	@else if $point == large1920 {
+		@media  only screen and (max-width: 1920px) { @content; }
+	}
+	@else if $point == large1650 {
+		@media  only screen and (max-width: 1700px) { @content; }
+	}
+	@else if $point == large1470 {
+		@media  only screen and (max-width: 1470px) { @content; }
+	}
+	@else if $point == large1300 {
+		@media  only screen and (max-width: 1300px) { @content; }
+	}
+	@else if $point == desktop {
+		@media  only screen and (max-width: 1199px) { @content; }
+	}
+	@else if $point == tablet1100 {
+			@media  only screen and (max-width: 1100px) { @content; }
+	}
+	@else if $point == tablet {
+			@media  only screen and (max-width: 1024px) { @content; }
+	}
+	@else if $point == medium {
+		@media only screen  and (max-width: 991px) { @content; }
+	}
+	@else if $point == medium-second {
+		@media only screen  and (max-width: 950px) { @content; }
+	}
+	@else if $point == medium850 {
+		@media only screen  and (max-width: 850px) { @content; }
+	}
+	@else if $point == medium820 {
+		@media only screen  and (max-width: 830px) { @content; }
+	}
+	@else if $point == small {
+		@media  only screen and (max-width: 768px)  { @content; }
+	}
+	@else if $point == ss-small {
+		@media  only screen and (max-width: 670px)  { @content; }
+	}
+	@else if $point == s-small {
+		@media  only screen and (max-width: 570px)  { @content; }
+	}
+	@else if $point == x-small {
+		@media  only screen and (max-width: 480px)  { @content; }
+	}
+	@else if $point == super-small {
+		@media  only screen and (max-width: 430px)  { @content; }
+	}
+	@else if $point == small320 {
+		@media  only screen and (max-width: 320px) and (min-height: 550px)  { @content; }
+	}
+	@else if $point == small375 {
+		@media  only screen and (max-width: 375px) and (max-height: 670px) { @content; }
+	}
+	@else if $point == small-330 {
+		@media  only screen and (max-width: 380px)  { @content; }
+	}
+	@else if $point == small400 {
+		@media  only screen and (max-width: 450px) and (max-height: 800px) { @content; }
+	}
+	@if $point == small-height {
+		@media only screen and (max-height: 740px) { @content; }
+	}
+}
+
+
+/*
+ * A mixin targeting a specific device width and larger.
+ * These are the available targets: 'xs', 'sm', 'md', 'lg', 'xl'
+ *
+ * @param {string} $media The target media
+ */
+@mixin respond-from($media) {
+	@if $media == xs {
+		@media (min-width: 0px)  { @content; }
+	} @else if $media == sm {
+		@media (min-width: 851px) { @content; }
+	} @else if $media == md {
+		@media (min-width: 1200px) { @content; }
+	} @else if $media == lg {
+		@media (min-width: 1450px) { @content; }
+	} @else if $media == xl {
+		@media (min-width: 1800px) { @content; }
+	}
+}
+
+/*
+ * Generates classes for a grid of columns, prefixed by size.
+ * The result will be .col-[size]-[col]-[total-columns] E.g. .col-xs-6-12
+ *
+ * @param {string}	$size			The name of the size target (e.g. xs, sm, md, lg, xl, etc.)
+ * @param {int}		$grid-columns	Amount of columns
+ */
+@mixin grid-generator($size, $grid-columns) {
+	@for $i from 1 through $grid-columns {
+		.col-#{$size}-#{$i}-#{$grid-columns} {
+			width: percentage($i / $grid-columns);
+			// float: left;
+			// padding-left: 15px;
+			// padding-right: 15px;
+		}
+	}
+}
+
+
+
+ // Generating grid
+@include grid-generator(xs, 12);
+
+@include respond-from(sm) {
+	@include grid-generator(sm, 12);
+}
+
+@include respond-from(md) {
+	@include grid-generator(md, 12);
+}
+
+@include respond-from(lg) {
+	@include grid-generator(lg, 12);
+}
+
+@include respond-from(xl) {
+	@include grid-generator(xl, 12);
+}

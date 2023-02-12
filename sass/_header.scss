@@ -1,0 +1,89 @@
+.header {
+	//padding-top: 44px;
+	display : flex;
+
+	@include break(medium850) {
+		display : none;
+	}
+
+	&__logo {
+		margin-left  : 0;
+		margin-right : auto;
+
+	}
+
+	&__contact-tel {
+		margin-top : 16px;
+
+		a {
+			&:hover {
+				color : #6535F5;
+			}
+		}
+	}
+
+	&__menu-link {
+		display        : inline-flex;
+		margin-right   : 0;
+		margin-left    : auto;
+		font-family    : 'Lab Grotesque', sans-serif;
+		font-style     : normal;
+		font-weight    : 500;
+		font-size      : 18px;
+		line-height    : 1.22;
+		letter-spacing : 0.01em;
+		color          : #262626;
+		transition     : color 0.3s ease;
+		background     : transparent;
+		margin-top     : 16px;
+		cursor         : pointer;
+
+		&:hover, &:active {
+			color : #6535F5;
+		}
+	}
+
+}
+
+.mobile-header {
+	position       : fixed;
+	width          : 100%;
+	padding-top    : 30px;
+	padding-bottom : 20px;
+	background     : rgba(42, 22, 101, 0.6);
+	display        : none;
+	padding-left   : 15px;
+	padding-right  : 15px;
+	flex-direction : row;
+	z-index        : 100;
+
+	@include break(medium850) {
+		display : flex;
+	}
+
+	&__contact-tel {
+		margin-left  : 0;
+		margin-right : auto;
+
+	}
+}
+
+.mobile-link {
+	font-family : 'Lab Grotesque', sans-serif;
+	font-weight : normal;
+	font-size   : 16px;
+	line-height : 1.18;
+	color       : #FFFFFF;
+}
+
+.hamburger {
+	width               : 26px;
+	height              : 18px;
+	background-repeat   : no-repeat;
+	background-position : center center;
+	background-image    : url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bGluZSB4MT0iMSIgeTE9IjEiIHgyPSIyNSIgeTI9IjEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjEiIHkxPSI5IiB4Mj0iMjUiIHkyPSI5IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxIiB5MT0iMTciIHgyPSIyNSIgeTI9IjE3IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==);
+	border              : none;
+	cursor              : pointer;
+	background-color    : transparent;
+
+}
